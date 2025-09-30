@@ -1,0 +1,33 @@
+@startuml Empleado
+abstract class Empleado {
+    - RFC:18
+    - apellidos:Segundo Esquivel
+    - nombres:Jazmin
+    __init__(RFC, apellidos, nombres)
+    ingresos()
+    sueldo_neto()
+    mostrar_info()
+}
+
+class EmpleadoVendedor {
+    - monto_vendido
+    - tasa_comision
+    __init__(RFC, apellidos, nombres, monto_vendido, tasa_comision)
+    ingresos()
+    bonificacion()
+    descuento()
+    sueldo_neto()
+}
+
+class EmpleadoPermanente {
+    - sueldo_base
+    - num_seguro
+    __init__(RFC, apellidos, nombres, sueldo_base, num_seguro)
+    ingresos()
+    descuento()
+    sueldo_neto()
+}
+
+Empleado <|-- EmpleadoVendedor
+Empleado <|-- EmpleadoPermanente
+@enduml
