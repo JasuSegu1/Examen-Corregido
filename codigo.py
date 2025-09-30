@@ -61,7 +61,7 @@ class EmpleadoPermanente(Empleado):
         return self.ingresos() - self.descuento()
 
 
-# Ejemplo
+
 vendedor = EmpleadoVendedor("SEGJ060531", "Segundo Esquivel", "Jazmín", 2000, 0.10)
 permanente = EmpleadoPermanente("SEGJ060531", "Segundo Esquivel", "Jazmín", 3000, "SS123")
 
